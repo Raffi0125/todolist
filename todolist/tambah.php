@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db.php';
+require_once'Koneksi.php';
 
 if (isset($_POST['tambah'])) {
     $task = $_POST['task'];
