@@ -1,9 +1,6 @@
 <?php
 session_start();
-$mysqli = new mysqli("localhost", "root", "", "todo_app");
-if ($mysqli->connect_error) {
-    die("Koneksi gagal: " . $mysqli->connect_error);
-}
+require_once'Koneksi.php';
 
 $id = isset($_GET['id']) ? intval($_GET['id']) : (isset($_POST['id']) ? intval($_POST['id']) : null);
 
